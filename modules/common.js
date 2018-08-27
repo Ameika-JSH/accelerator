@@ -18,6 +18,5 @@ const defaultPage = "index";
 /* variable */
 exports.MSG_LIST = MSG_LIST;
 exports.defaultPage = defaultPage;
-exports.dynamoBatchLimit = dynamoBatchLimit;
 
 logger.info('Start>Common module');
