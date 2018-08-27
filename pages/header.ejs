@@ -1,0 +1,46 @@
+<header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand nav-title" href="dashboard">B2 TF 회의실 관리</a>
+		<% if((page) != 'login'){ %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item <% if (page == "timeTable") { %> active<% } %>">
+              <a class="nav-link" href="timeTable">회의실예약</a>
+            </li>
+			<% if(isAdmin) { %>
+            <li class="nav-item<% if (page == "roomMng") { %> active<% } %>">
+              <a class="nav-link" href="roomMng">회의실관리</a>
+            </li>
+            <li class="nav-item<% if (page == "empMng") { %> active<% } %>">
+              <a class="nav-link" href="empMng">직원현황</a>
+            </li>	
+			<% } %>		
+            <li class="nav-item<% if (page == "groupMng") { %> active<% } %>">
+              <a class="nav-link" href="groupMng">그룹현황</a>
+            </li>
+			<% if(isAdmin || isBatch) { %>						
+            <li class="nav-item<% if (page == "batchReserve") { %> active<% } %>">
+              <a class="nav-link" href="batchReserve">일괄등록</a>
+            </li>
+			<% } %>
+            <li class="nav-item<% if (page == "mySchedule") { %> active<% } %>">			
+              <a class="nav-link" href="mySchedule">나의일정</a>
+            </li> 
+			<li class="nav-item<% if (page == "roomInfo") { %> active<% } %>">
+              <a class="nav-link" href="roomInfo">회의실 안내</a>
+            </li>
+			<li class="nav-item<% if (page == "personalConfig") { %> active<% } %>">
+              <a class="nav-link" href="personalConfig">메일변경</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="logout">로그아웃</a>
+            </li>
+          </ul>
+        </div>
+		<% } %>
+      </nav>
+    </header>

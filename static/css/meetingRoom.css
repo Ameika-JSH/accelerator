@@ -1,0 +1,413 @@
+body
+{
+	background-color : #DDDDDD;
+	font-family : "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+main
+{
+	background-color : #FFFFFF;
+	min-height : var(--breakpoint-lg);
+	min-height : 992px;
+}
+
+footer
+{
+	text-align : right;
+}
+
+i:before
+{
+	font-size : 16px;
+}
+
+
+.input-group-text
+{
+	width : 100px;
+}
+
+.nav-title
+{
+	padding-left : 1em;
+}
+
+li.active
+{
+	background-color : var(--red);
+}
+
+p.noMargin
+{
+	margin : 0;
+}
+
+.center
+{
+	text-align : center;
+}
+
+/* Login Page*/
+
+#btnLogin
+{
+	width : 100%;
+	height : 100%;
+}
+
+#btnLogin i:before
+{
+	font-size : 25px;
+}
+
+.loginDataDiv .input-group:last-child
+{
+	margin-bottom : 0 !important;
+}
+
+.loginLabel
+{
+	font-size : 20px;
+	font-weight : bold;
+}
+
+#anchorJoin
+{
+	margin-top : 10px;
+	text-align : right;
+}
+
+#anchorJoin a
+{
+	display : block;
+}
+
+/* Time Table */
+#timeTable
+{
+	width : 100%;
+	overflow-x:auto;
+	--border : 1px solid #AAAAAA;
+	--border2 : 2px solid #777777;
+	--border3 : 1px dotted #AAAAAA;
+}
+
+#timeTable div
+{
+	height : 40px;
+	width : 80px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.timeTableHead
+{
+	display : table-header-group;
+}
+
+.timeTableBody
+{
+	display : table-row-group;
+}
+
+.colTime, .colStatus
+{
+	display:table-cell;
+}
+
+.colOffice:nth-child(even)
+{
+	background-color : #EEEEEE;
+}
+
+.timeTableBody div:first-child .colTimeElement:first-child
+{
+	border : 1px solid #AAAAAA;
+	border-right : 2px solid #777777;
+}
+
+.timeTableBody div:first-child .colTimeElement:nth-child(n+2)
+{
+	border-left : 1px solid #AAAAAA;
+	border-bottom : 1px solid #AAAAAA;
+	border-right : 2px solid #777777;
+}
+
+.timeTableBody div:nth-child(n+2) .colTimeElement:first-child
+{
+	border-top : 1px solid #AAAAAA;
+	border-bottom : 1px solid #AAAAAA;
+	border-right : 1px solid #AAAAAA;
+}
+
+.timeTableBody div:nth-child(n+2) .colTimeElement:nth-child(n+2)
+{
+	border-bottom : 1px solid #AAAAAA;
+	border-right : 1px solid #AAAAAA;
+}
+
+.timeTableBody div.colTime div.colTimeElement:nth-child(2n+1),
+.timeTableBody div.colStatus div.colTimeElement:nth-child(2n+1)
+{
+	border-bottom : 1px dotted #AAAAAA;
+}
+
+#timeTable .timeTableBody .colTimeElement.reserved
+{
+	background-color:#d3e9fe;
+	border : 0;
+}
+
+#timeTable .timeTableBody .colTimeElement.reserved.rTop
+{
+	border-top : 2px solid #676767;
+	border-left : 2px solid #676767;
+	border-right : 2px solid #676767;
+}
+
+#timeTable .timeTableBody .colTimeElement.reserved.rMid
+{
+	border-left : 2px solid #676767;
+	border-right : 2px solid #676767;
+}
+
+#timeTable .timeTableBody .colTimeElement.reserved.rBottom
+{
+	border-bottom : 2px solid #676767;
+}
+
+.colTimeElement.reserved
+{
+    position: relative;
+    left: 0px;
+    height: 80px;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+
+.underbar
+{
+	border-bottom : 1px solid #AAAAAA;
+}
+
+#spanHover
+{
+	display : none;
+	position: fixed;
+	width : 300px;
+	height : auto;
+	background-color : white;
+	border: 3px solid;
+    border-radius: 10px;
+    padding: 10px;
+    border-style: outset;
+}
+
+div.colDiv {
+	margin : 0px 10px;
+	border-radius : 10px;
+	height : 320px;	
+	background-color : #FBEEEE;	
+}
+div.colDiv p
+{
+	text-align : center;
+	margin : 10px 0px;
+	font-weight : bold;
+	height : 7.5%
+}
+
+#toggleBtn, #btnRoomInsert
+{
+    float: right;
+}
+
+#roomTable
+{
+	overflow : scroll;
+}
+.btnOffice,.btnRoom
+{
+	width : 100%;
+	margin : 5px 0px;
+}
+button.btn-outline-black:hover
+{
+	background-color : transparent;
+	color : #000;
+}
+button.btn-outline-black:focus
+{
+	box-shadow : 0 0 0 0.2rem rgba(0,0,0,0)
+}
+.divScroll
+{
+	overflow : scroll;
+}
+.divScroll::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+#divOffice
+{
+	height : 87.5%;
+}
+
+#divTime
+{
+	margin : 50px 0px 0px 0px;
+}
+
+#divTime tr td
+{
+	width : 100px;
+	height : 50px;
+}
+
+#divTime button
+{
+	height : 100%;
+	width : 100%;
+}
+
+#divHover
+{
+	display : none;
+	background-color : #00000061;
+	position : fixed;
+	left :0;
+	top : 0;
+	width : 100%;
+	height : 100%;
+}
+
+#divHover main
+{
+	background-color : #00000000;
+	padding-top: 15%;
+}
+
+#divHover main .inputDataDiv
+{
+	background-color : #FFFFFF;
+    padding: 50px 0;
+    border-radius: 10px;
+    border: 3px solid #797979;;
+}
+#divHover main .inputDataDiv h1
+{
+	padding-left : 15px;
+}
+
+/* ROOM INFO Table*/
+.inputDataDiv
+{
+	margin-bottom : 30px;
+}
+@media (min-width: 992px){
+	
+	.lastNoMargin .input-group:nth-child(n+3)
+	{
+		margin-bottom : 0 !important;
+	}
+	
+	.btnRoomUpdate,.btnRoomDelete
+	{
+		width : 5em;
+	}
+	.tdButtons
+	{
+		width : 7.8em;
+	}
+	.office
+	{
+		width : 4em;
+		text-align : center;
+	}
+	.size
+	{
+		width : 5em;
+		text-align : center;
+	}
+}
+@media (max-width: 576px){
+	.ar
+	{
+		display : none;
+	}	
+	
+	.btnRoomUpdate,.btnRoomDelete
+	{
+		width : 3em;
+	}
+	.tdButtons
+	{
+		width : 6.1em;
+	}
+	
+	.office,
+	.size
+	{
+		width : 4em;
+		text-align : center;
+	}
+	
+	.nav-item
+	{
+		margin : 0px 10px;
+	}
+}
+
+.inputRoomInfo
+{
+	width : 100%;
+}
+
+#roomInfoTable
+{
+	table-layout : fixed;
+	font-size : 15px;
+}
+
+#roomInfoTable thead,#tableLabel
+{
+	font-size : 18px;
+	background-color : #cb3d3f;
+	border-color : #af393b;
+	text-align : center;
+}
+#roomInfoTable thead>tr>th,#tableLabel
+{
+	font-weight : bold !important;
+	border-color : #af393b !important;
+}
+
+#tableLabel
+{
+	padding : 10px;
+	margin-bottom : 0px;
+	border: 1px solid;
+}
+
+#roomInfoTable td
+{
+	text-overflow : ellipsis;
+	overflow : hidden;
+	white-space:nowrap;
+}
+
+#btnRoomInsert
+{
+	width : 100%;
+	height : 100%;
+}
+
+#btnRoomInsert i:before
+{
+	font-size : 25px;
+}

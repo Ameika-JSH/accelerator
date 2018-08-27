@@ -1,0 +1,20 @@
+{
+  "name": "meetingscheduler",
+  "version": "1.0.0",
+  "description": "Meeting Scheduler for Lotte B2 Project",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --ignore static/*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "crypto": "^1.0.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "request": "^2.88.0"
+  }
+}

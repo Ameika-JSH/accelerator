@@ -1,0 +1,95 @@
+@keyframes spin {
+	from 
+	{
+		transform: rotate(0turn);
+	}
+	to 
+	{
+		transform: rotate(1turn);
+	}
+
+ } 
+
+@keyframes dot
+{
+	from
+	{
+		color : #8f9191;
+	}
+	24%
+	{
+		color : #8f9191;
+	}
+	25%
+	{
+		color : #54585a;
+	}	
+	49%
+	{
+		color : #54585a;
+	}
+	50%
+	{
+		color : #000000;
+	}
+	74%
+	{
+		color : #000000;
+	}
+	75%
+	{
+		color : #da291c;
+	}	
+	to
+	{
+		color : #da291c;
+	}	
+}
+ 
+.spinner {
+	position: absolute;		
+	height: 82px;
+	width: 80px; 
+	left: calc(50% - 41px);
+	top: calc(50% - 40px);
+	animation: spin 1.5s infinite linear;
+}
+
+.dot-div
+{
+	position: absolute;		
+	left: calc(50% - 41px);
+	top: calc(50% + 40px);
+	font-size : 1.5em;
+}
+
+#divSpinner
+{
+	position : fixed;
+	width: 100%;
+	height: 100%;
+	left : 0px;
+	top : 0px;
+	background-color : rgba(0,0,0,.25);
+	z-index : -3000;
+}
+
+.dot-1
+{
+	animation : dot 1.6s infinite linear;
+}
+
+.dot-2
+{
+	animation : dot 1.6s 0.4s infinite linear;
+}
+
+.dot-3
+{
+	animation : dot 1.6s 0.8s infinite linear;
+}
+
+.dot-4
+{
+	animation : dot 1.6s 1.2s infinite linear;
+}
