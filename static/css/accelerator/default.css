@@ -105,6 +105,11 @@ header li.active
 	padding-bottom : 15px
 }
 
+.blue
+{
+	color : #6610f2;
+}
+
 .green
 {
 	color : #8CC328;
@@ -133,4 +138,10 @@ header li.active
 .p-title
 {
 	font-size : 35px;
+}
+
+footer img
+{
+	height: -webkit-fill-available;
+    padding-bottom: 6px;
 }
