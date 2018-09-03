@@ -16,6 +16,29 @@ footer
 	z-index : 500;
 }
 
+.sidemenu
+{
+	position : fixed;
+	top : 60px;
+	left : 20px;
+}
+
+.sidemenu a
+{
+	display : block;
+	height : 50px;
+	text-decoration : none;
+	width : 150px;
+	padding-left : 10px;
+	border-radius : 5px;
+}
+
+a.menuLi_selected
+{
+	background-color : #343a40;
+	color : white;
+}
+
 i:before
 {
 	font-size : 16px;
@@ -39,9 +62,9 @@ i.fa-save:before
 
 header li.active
 {
-	#background-color : var(--red);
-	background-color : #dc3545
+	background-color : #8CC328;
 }
+
 
 .center
 {
@@ -82,6 +105,11 @@ header li.active
 	padding-bottom : 15px
 }
 
+.green
+{
+	color : #8CC328;
+}
+
 .gray
 {
 	color : #54585A;
@@ -90,4 +118,19 @@ header li.active
 .no-margin
 {
 	margin : 0px;
+}
+
+.margin-top
+{
+	margin-top : 150px;
+}
+
+.margin-bottom
+{
+	margin-bottom : 400px;
+}
+
+.p-title
+{
+	font-size : 35px;
 }

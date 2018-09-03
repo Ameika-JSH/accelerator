@@ -15,14 +15,15 @@ const logger = require("../modules/logger.js").logger(__filename,
 
 const root = path.join(path.dirname(__dirname), '/pages/');
 const mainPage = 'main.ejs';
-const pageList = ['yet','info'];
+const pageList = ['yet'];
 
 function renderTool(req,res,main,page,data)
 {
 	let json = {
 			page : page,
 			isAdmin : req.session.isAdmin ,
-			isBatch : req.session.isBatch
+			isBatch : req.session.isBatch ,
+			sideMenu : []
 		}
 	if(data) Object.keys(data).forEach(key=>json[key] = data[key]);
 	res.render(root + main,json);
@@ -31,6 +32,12 @@ function renderTool(req,res,main,page,data)
 router.get('/',function(req,res)
 {	
 	renderTool(req,res,mainPage,common.defaultPage);
+});
+
+router.get('/info',function(req,res)
+{	
+	let sideMenu = ['회사 개요','CEO 인사말','회사 연혁','조직도'];
+	renderTool(req,res,mainPage,'info',{sideMenu:sideMenu});
 });
 
 router.get('/:pageName',function(req,res)

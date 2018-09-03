@@ -34,11 +34,16 @@
 	<script src="js/sweetalert.min.js"></script>    	
 	<input id='pageName' value='<%=page %>'>
     <%include header%>
+	<div class = 'sidemenu'>
+		<% if(sideMenu.length != 0) for(var i = 0 ; i < sideMenu.length ; i++){ %>		
+			<a href = '#' move = '#chap<%=i+1 %>' id = 'menu<%=i+1 %>'<% if( i == 0 ){ %> class = 'menuLi_selected'<% } %>><%=sideMenu[i] %></a>		
+		<% } %>
+	</div>
     <main role="main" class="container">
 	<%-include(page)%>
     </main>
     <%include footer%>   	
 	<script src="js/accelerator/default.js"></script>	
-	<script src="js/accelerator/<%=page %>.js"></script>
+	<script src="js/accelerator/<%=page %>.js"></script>	
   </body>
 </html>
